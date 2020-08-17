@@ -34,87 +34,20 @@
             <div>Hello Pink</div>
             <div class="notAList">Hello Purple</div>
         </div>
+        <br>
         <div id="buttonForClicks">
             <button>CLICK ME NOW</button>
         </div>
+        <br>
 
         <div id="buttonWithEventListener">
             <button>BUTTON WITH AN EVENT LISTENER</button>
         </div>
-
-        <script>
-            console.dir(document)
-            console.log(document.URL)
-            // document.children[0].children[1].children[1].childNodes[0].nodeValue =
-            //     'How to Play With DOM'
-            // let firstH1 = document.getElementById('firstH1')
-            // firstH1.innerText =
-            //     'Hello World, lets play with the DOM!!!***UPDATED'
-            // console.dir(firstH1)
-
-            //have dom respond to a user typing, when the user is done inputting, show them a welcome message
-            const welcome = document.getElementById('welcome')
-
-            const upText = () => {
-                let holder = document.getElementById('newTxt').value
-                welcome.innerText = `Hi there ${holder}! It is so nice to meet you!`
-            }
-
-            //for loop to loop over an array of list elements
-            // const listItems = document.getElementsByTagName("li")
-            // //console.log(listItems)
-            // for (let i = 0; i < listItems.length; i++) {
-            //     let item = listItems[i]
-            //     if (i % 2) {
-            //         item.style.color = "pink"
-            //     }
-            //     item.innerText = 'Element ' + (i + 1)
-            // }
-            //query selector (only one node)
-            const firstListItem = document.querySelector('li.listItem')
-            firstListItem.innerHTML = 'Oh how you have changed!'
-
-            //Create a new element in the DOM
-            const newListElem = document.createElement('div')
-            newListElem.innerHTML = 'I am a brand new element created!***'
-            let elementToAddTo = document.querySelector("div.notAList")
-            elementToAddTo.appendChild(newListElem)
-
-            // setting up an input with a onclick event
-            const clickMe = document.getElementById("buttonForClicks")
-            clickMe.onclick = clickMeFunc
-            function clickMeFunc() {
-                console.log('What a good doggie!')
-            }
-
-            //adding an event listener
-            const buttonWithEveListener = document.getElementById("buttonWithEventListener")
-            buttonWithEveListener.addEventListener("click", sillyFunc)
-            function sillyFunc() {
-                console.log('Im so silly!')
-            }
-            //changing list attention on hover
-            const listItems = document.getElementsByTagName("li")
-            //console.log(listItems)
-            for (let i = 0; i < listItems.length; i++) {
-                let item = listItems[i]
-                item.onmouseover = function() {
-                    this.style.backgroundColor ='pink'
-                }
-                item.onmouseout = function() {
-                    this.style.backgroundColor ='white'
-                }
-            }
-
-            //image opens in a new window
-            const smallImages = document.getElementsByTagName("img")
-            for (let i = 0; i < smallImages.length; i++) {
-                let image = smallImages[i]
-                image.onclick = openInNewWindow
-                function openInNewWindow() {
-                    window.open(this.src)
-                }
-            }
-        </script>
+        <script src="js/welcome.js" type="text/javascript"></script>
+        <script src="js/querySelector.js" type="text/javascript"></script>
+        <script src="js/addElemsToDom.js" type="text/javascript"></script>
+        <script src="js/openImgNewWindow.js" type="text/javascript"></script>
+        <script src="js/inputWClickEvent.js" type="text/javascript"></script>
+        <script src="js/listWithAttention.js" type="text/javascript"></script>
     </body>
 </html>
